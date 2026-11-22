@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   inkscape:export-ydpi="256"
+   inkscape:export-xdpi="256"
+   inkscape:export-filename="C:\Users\Veljko\Documents\Tank Game\graphics\player_red.png"
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 210 297"
+   version="1.1"
+   id="svg8"
+   inkscape:version="1.0 (4035a4fb49, 2020-05-01)"
+   sodipodi:docname="player_red.svg">
+  <defs
+     id="defs2" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.98994949"
+     inkscape:cx="488.43007"
+     inkscape:cy="576.94924"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     inkscape:document-rotation="0"
+     showgrid="false"
+     inkscape:window-width="1920"
+     inkscape:window-height="1001"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <g
+       id="g850">
+      <rect
+         y="115.66193"
+         x="79.486603"
+         height="65.676125"
+         width="51.026787"
+         id="rect833"
+         style="opacity:0.999;fill:#ff0000;fill-rule:evenodd;stroke:#000000;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:0;stroke-dasharray:none" />
+      <path
+         transform="scale(0.26458333)"
+         d="M 381.01367 399.95508 L 381.01367 492.26367 L 383.29102 492.26367 A 70.316874 70.316874 0 0 0 326.5332 561.25977 A 70.316874 70.316874 0 0 0 396.84961 631.57617 A 70.316874 70.316874 0 0 0 467.16797 561.25977 A 70.316874 70.316874 0 0 0 410.41406 492.26367 L 412.68555 492.26367 L 412.68555 399.95508 L 381.01367 399.95508 z "
+         style="opacity:0.999;fill:#ff0000;fill-rule:evenodd;stroke:#000000;stroke-width:9.44881902;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:0;stroke-dasharray:none"
+         id="path835" />
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,21 @@
+# Godot 4+ specific ignores
+.godot/
+/android/
+
+# Godot-specific ignores (keep *.import files, they hold import settings)
+*.translation
+
+# Export output
+/export/
+/build/
+/exports/
+*.pck
+*.exe
+*.x86_64
+*.apk
+*.aab
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/

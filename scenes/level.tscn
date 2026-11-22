@@ -1,0 +1,89 @@
+[gd_scene load_steps=12 format=3 uid="uid://y0go57gy4n7"]
+
+[ext_resource type="Script" path="res://code/level.gd" id="1_shuo7"]
+[ext_resource type="Script" path="res://code/GameManager.gd" id="2_1bwr4"]
+[ext_resource type="PackedScene" uid="uid://xvd44n3a53ub" path="res://scenes/MazeGenerator.tscn" id="2_dtge7"]
+[ext_resource type="PackedScene" uid="uid://b3g0yek7w26ys" path="res://scenes/player.tscn" id="2_xafj2"]
+[ext_resource type="PackedScene" uid="uid://df081b8appk5p" path="res://scenes/score_1.tscn" id="3_cbsv3"]
+[ext_resource type="Script" path="res://code/player2.gd" id="4_1w78a"]
+[ext_resource type="Script" path="res://code/Border.gd" id="4_7hd3r"]
+[ext_resource type="PackedScene" uid="uid://bynnok2cl52hp" path="res://scenes/score_2.tscn" id="4_dn7cx"]
+[ext_resource type="Texture2D" uid="uid://bhk8ymk2nmfuo" path="res://graphics/player_green.png" id="5_3y3bt"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gffrl"]
+size = Vector2(12.5, 720)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8gebd"]
+size = Vector2(1280, 24)
+
+[node name="Level" type="Node"]
+script = ExtResource("1_shuo7")
+
+[node name="GameManager" type="Node" parent="."]
+unique_name_in_owner = true
+script = ExtResource("2_1bwr4")
+
+[node name="Score1" parent="GameManager" instance=ExtResource("3_cbsv3")]
+
+[node name="Score2" parent="GameManager" instance=ExtResource("4_dn7cx")]
+
+[node name="Generator" parent="." instance=ExtResource("2_dtge7")]
+
+[node name="Player" parent="." instance=ExtResource("2_xafj2")]
+position = Vector2(641, 360)
+scale = Vector2(0.1, 0.1)
+
+[node name="Timer" type="Timer" parent="Player"]
+
+[node name="Player2" parent="." instance=ExtResource("2_xafj2")]
+position = Vector2(924, 336)
+scale = Vector2(0.1, 0.1)
+script = ExtResource("4_1w78a")
+
+[node name="PlayerImage" parent="Player2" index="0"]
+position = Vector2(0, -50)
+texture = ExtResource("5_3y3bt")
+
+[node name="Timer" type="Timer" parent="Player2"]
+
+[node name="Border" type="Container" parent="."]
+visible = false
+layout_direction = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -3.0
+offset_bottom = -3.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("4_7hd3r")
+
+[node name="Right" type="StaticBody2D" parent="Border"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Border/Right"]
+position = Vector2(1286, 360)
+shape = SubResource("RectangleShape2D_gffrl")
+
+[node name="Left" type="StaticBody2D" parent="Border"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Border/Left"]
+position = Vector2(-6, 360)
+shape = SubResource("RectangleShape2D_gffrl")
+
+[node name="Top" type="StaticBody2D" parent="Border"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Border/Top"]
+position = Vector2(641, -13)
+shape = SubResource("RectangleShape2D_8gebd")
+
+[node name="Bottom" type="StaticBody2D" parent="Border"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Border/Bottom"]
+position = Vector2(641, 733)
+shape = SubResource("RectangleShape2D_8gebd")
+
+[connection signal="shoot" from="Player" to="." method="_on_player_shoot"]
+[connection signal="tree_exiting" from="Player" to="." method="_on_player_tree_exiting"]
+[connection signal="shoot" from="Player2" to="." method="_on_player_shoot"]
+
+[editable path="Player2"]
