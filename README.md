@@ -83,6 +83,10 @@ This is a finished hobby prototype, not a polished game. There are no menus, no 
 
 All sprites and tiles were drawn by me in Inkscape. `icon.svg` is Godot's default project icon, © the Godot Engine contributors, [MIT licence](https://godotengine.org/license/).
 
+## License
+
+[MIT](LICENSE)
+
 ## Author
 
 **Veljko Milisavljević** · [GitHub](https://github.com/veljko-milisavljevic)
