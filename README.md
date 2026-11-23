@@ -2,8 +2,6 @@
 
 A local two-player tank duel in Godot 4: two tanks fight with bouncing bullets inside a maze that is generated anew every round.
 
-![Gameplay](docs/gameplay.gif)
-
 ## Features
 
 - **Procedurally generated maze.** Every round starts in a new random maze (see [Maze generator](#maze-generator)).
@@ -78,6 +76,12 @@ MazeGen/             Standalone maze-generator prototype
 ## Status
 
 This is a finished hobby prototype, not a polished game. There are no menus, no win condition, no sound and no gamepad support. Player 1 spawns at the centre of the screen and player 2 in the top-left cell.
+
+Known issues:
+
+- Player 1 can spawn on a maze wall line, because the centre of the screen is not always inside a cell.
+- `level.tscn` connects a `tree_exiting` signal to `_on_player_tree_exiting`, which is not defined, so Godot logs an error when a tank is destroyed.
+- Dead code: `_on_body_entered` in `player.gd` is not connected to any signal (and would call `GM.score2()`, while the function is named `score_2()`), and the resize handler in `code/Border.gd` is never connected.
 
 ## Credits
 
